@@ -1,0 +1,8 @@
+# Configuração para o Render
+services:
+  - type: web
+    name: bot-whatsapp
+    env: node
+    plan: free
+    buildCommand: cd backend && npm install && cd ../frontend && npm install && npm run build
+    startCommand: cd backend && node server.js
